@@ -1,0 +1,75 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\KeilC_8051\UART_Mode1\UART_Mode1.uvproj
+Project File Date:  07/07/2023
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+main.c(2): warning C318: can't open file '..Lib\Delay.h'
+compiling Delay.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=64
+"UART_Mode1" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=64
+"UART_Mode1" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=64
+creating hex file from "UART_Mode1"...
+"UART_Mode1" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=64
+creating hex file from "UART_Mode1"...
+"UART_Mode1" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=64
+creating hex file from "UART_Mode1"...
+"UART_Mode1" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=78
+creating hex file from "UART_Mode1"...
+"UART_Mode1" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=9.0 xdata=0 code=85
+creating hex file from "UART_Mode1"...
+"UART_Mode1" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(26): warning C280: 'i': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_UART_WRITE?MAIN
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_MS?DELAY
+Program Size: data=10.0 xdata=0 code=90
+creating hex file from "UART_Mode1"...
+"UART_Mode1" - 0 Error(s), 3 Warning(s).

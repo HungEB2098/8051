@@ -1,0 +1,38 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              06/17/2023 01:06:07 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include<REGX52.h>
+   2          sbit LED_PIN = P0^0; //Dat ten chan P0^0 la LED_PIN
+   3          void Delay_ms(unsigned int t)
+   4           {
+   5   1         unsigned int x,y;
+   6   1         for (x=0;x<t;x++) {
+   7   2              for(y = 0;y<123;y++); // Dalay ~1ms
+   8   2           }
+   9   1       }
+  10           void main() {
+  11   1        while(1) {
+  12   2          LED_PIN  = !LED_PIN; // Dao trang thai cua chan LED_PIN
+  13   2          Delay_ms(500);
+  14   2        }
+  15   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     43    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

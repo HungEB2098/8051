@@ -1,0 +1,5 @@
+"main.obj",
+".\LCD4.obj",
+".\Delay.obj" 
+TO "Timer0_DoDoRongXung" 
+RAMSIZE(256) 

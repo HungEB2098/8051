@@ -1,0 +1,5 @@
+"main.obj",
+".\Delay.obj",
+".\IE74595.obj" 
+TO "MoRongNgoRa_74595" 
+RAMSIZE(256) 

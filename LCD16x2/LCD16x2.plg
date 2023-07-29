@@ -1,0 +1,88 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\KeilC_8051\LCD16x2\LCD16x2.uvproj
+Project File Date:  07/02/2023
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling Delay.c...
+compiling LCD4.c...
+C:\Users\Autumn\Downloads\Bai018\Lib\LCD4.c(37): message C320: "Lcd - Use delay method."
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=18.0 xdata=0 code=471
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_OUT?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=19.0 xdata=0 code=423
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling LCD4.c...
+C:\Users\Autumn\Downloads\Bai018\Lib\LCD4.c(37): message C320: "Lcd - Use delay method."
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_OUT?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=19.0 xdata=0 code=423
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_OUT?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=19.0 xdata=0 code=423
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(12): error C101: ''l': invalid character constant
+main.c(12): error C141: syntax error near 'll'
+main.c(12): error C101: '')': invalid character constant
+Target not created
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_OUT?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=19.0 xdata=0 code=423
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CHR?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_OUT?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=19.0 xdata=0 code=427
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_OUT?LCD4
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=19.0 xdata=0 code=423
+creating hex file from "LCD16x2"...
+"LCD16x2" - 0 Error(s), 2 Warning(s).

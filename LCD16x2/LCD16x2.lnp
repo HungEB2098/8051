@@ -1,0 +1,5 @@
+".\Delay.obj",
+".\LCD4.obj",
+"main.obj" 
+TO "LCD16x2" 
+RAMSIZE(256) 

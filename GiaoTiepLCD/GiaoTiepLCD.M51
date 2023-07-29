@@ -1,0 +1,229 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/30/2023  15:26:15  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj, .\Delay.obj TO GiaoTiepLCD RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  .\Delay.obj (DELAY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?CLDOPTR)
+
+
+LINK MAP OF MODULE:  GiaoTiepLCD (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0009H     UNIT         _DATA_GROUP_
+            DATA    0011H     0001H     UNIT         ?DT?_LCD_CHR?MAIN
+            IDATA   0012H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     002DH     UNIT         ?C?LIB_CODE
+            CODE    0030H     002CH     UNIT         ?PR?LCD_INIT?MAIN
+            CODE    005CH     0023H     UNIT         ?PR?_LCD_OUT_CP?MAIN
+            CODE    007FH     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    009FH     001FH     UNIT         ?PR?_LCD_OUT?MAIN
+            CODE    00BEH     001EH     UNIT         ?PR?MAIN?MAIN
+            CODE    00DCH     001AH     UNIT         ?PR?_LCD_CMD?MAIN
+            CODE    00F6H     0017H     UNIT         ?PR?_LCD_CHR?MAIN
+            CODE    010DH     000FH     UNIT         ?PR?_LCD_CHR_CP?MAIN
+            CODE    011CH     000CH     UNIT         ?CO?MAIN
+            CODE    0128H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   GiaoTiepLCD (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0008H    0002H
+  +--> ?PR?LCD_INIT?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?_LCD_OUT?MAIN
+  +--> ?PR?_LCD_CMD?MAIN
+  +--> ?PR?_DELAY_MS?DELAY
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/30/2023  15:26:15  PAGE 2
+
+
+?PR?LCD_INIT?MAIN              -----    -----
+  +--> ?PR?_LCD_CMD?MAIN
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_LCD_CMD?MAIN              -----    -----
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?_LCD_OUT?MAIN              000AH    0003H
+  +--> ?PR?_LCD_CMD?MAIN
+  +--> ?PR?_LCD_OUT_CP?MAIN
+
+?PR?_LCD_OUT_CP?MAIN           000DH    0004H
+  +--> ?PR?_LCD_CHR_CP?MAIN
+
+?PR?_LCD_CHR_CP?MAIN           -----    -----
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  GiaoTiepLCD (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  C:00DCH         PUBLIC        _Lcd_Cmd
+  C:0030H         PUBLIC        Lcd_Init
+  C:00F6H         PUBLIC        _Lcd_Chr
+  C:00BEH         PUBLIC        main
+  C:010DH         PUBLIC        _Lcd_Chr_Cp
+  C:009FH         PUBLIC        _Lcd_Out
+  C:005CH         PUBLIC        _Lcd_Out_Cp
+  B:00A0H.1       PUBLIC        LCD_EN
+  B:00A0H.0       PUBLIC        LCD_RS
+  -------         PROC          _LCD_CMD
+  D:0007H         SYMBOL        cmd
+  C:00DCH         LINE#         9
+  C:00DCH         LINE#         10
+  C:00DCH         LINE#         11
+  C:00DEH         LINE#         12
+  C:00E0H         LINE#         13
+  C:00E2H         LINE#         14
+  C:00E4H         LINE#         16
+  C:00EAH         LINE#         17
+  C:00EAH         LINE#         18
+  C:00ECH         LINE#         19
+  C:00EEH         LINE#         21
+  C:00EEH         LINE#         22
+  C:00F5H         LINE#         23
+  C:00F5H         LINE#         24
+  -------         ENDPROC       _LCD_CMD
+  -------         PROC          _LCD_CHR_CP
+  D:0007H         SYMBOL        c
+  C:010DH         LINE#         26
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/30/2023  15:26:15  PAGE 3
+
+
+  C:010DH         LINE#         27
+  C:010DH         LINE#         28
+  C:010FH         LINE#         29
+  C:0111H         LINE#         30
+  C:0113H         LINE#         31
+  C:0115H         LINE#         32
+  -------         ENDPROC       _LCD_CHR_CP
+  -------         PROC          _LCD_CHR
+  D:0007H         SYMBOL        row
+  D:0005H         SYMBOL        col
+  D:0011H         SYMBOL        c
+  -------         DO            
+  D:0007H         SYMBOL        cmd
+  -------         ENDDO         
+  C:00F6H         LINE#         36
+  C:00F8H         LINE#         37
+  C:00F8H         LINE#         41
+  C:0105H         LINE#         42
+  C:0108H         LINE#         45
+  -------         ENDPROC       _LCD_CHR
+  -------         PROC          _LCD_OUT_CP
+  D:000DH         SYMBOL        str
+  -------         DO            
+  D:0010H         SYMBOL        i
+  -------         ENDDO         
+  C:005CH         LINE#         48
+  C:0062H         LINE#         49
+  C:0062H         LINE#         50
+  C:0065H         LINE#         51
+  C:0077H         LINE#         52
+  C:0077H         LINE#         53
+  C:007AH         LINE#         54
+  C:007CH         LINE#         55
+  C:007EH         LINE#         56
+  -------         ENDPROC       _LCD_OUT_CP
+  -------         PROC          _LCD_OUT
+  D:0007H         SYMBOL        row
+  D:0005H         SYMBOL        col
+  D:000AH         SYMBOL        str
+  -------         DO            
+  D:0007H         SYMBOL        cmd
+  -------         ENDDO         
+  C:009FH         LINE#         58
+  C:00A5H         LINE#         59
+  C:00A5H         LINE#         63
+  C:00B2H         LINE#         64
+  C:00B5H         LINE#         66
+  -------         ENDPROC       _LCD_OUT
+  -------         PROC          LCD_INIT
+  C:0030H         LINE#         69
+  C:0030H         LINE#         70
+  C:0030H         LINE#         71
+  C:0035H         LINE#         72
+  C:003CH         LINE#         73
+  C:0041H         LINE#         74
+  C:0048H         LINE#         75
+  C:004DH         LINE#         77
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/30/2023  15:26:15  PAGE 4
+
+
+  C:0052H         LINE#         79
+  C:0057H         LINE#         80
+  -------         ENDPROC       LCD_INIT
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:00BEH         LINE#         83
+  C:00BEH         LINE#         84
+  C:00BEH         LINE#         86
+  C:00C1H         LINE#         87
+  C:00CEH         LINE#         89
+  C:00CEH         LINE#         90
+  C:00CEH         LINE#         91
+  C:00D3H         LINE#         92
+  C:00DAH         LINE#         93
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:007FH         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:007FH         LINE#         5
+  C:007FH         LINE#         7
+  C:0089H         LINE#         8
+  C:0097H         LINE#         9
+  C:009EH         LINE#         10
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0003H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CHR?MAIN
+
+Program Size: data=19.0 xdata=0 code=308
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

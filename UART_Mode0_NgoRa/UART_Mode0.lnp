@@ -1,0 +1,4 @@
+"main.obj",
+".\Delay.obj" 
+TO "UART_Mode0" 
+RAMSIZE(256) 

@@ -1,0 +1,4 @@
+"main.obj",
+".\Delay.obj" 
+TO "NgatTimer0" 
+RAMSIZE(256) 

@@ -1,0 +1,133 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/20/2023  01:00:10  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj, .\Delay.obj TO SangDan8LED RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  .\Delay.obj (DELAY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  SangDan8LED (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0001H     UNIT         _DATA_GROUP_
+            IDATA   0009H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0037H     UNIT         ?PR?SANGDAN?MAIN
+            CODE    003AH     0021H     UNIT         ?PR?XENKE?MAIN
+            CODE    005BH     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    007BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0087H     0008H     UNIT         ?PR?MAIN?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   SangDan8LED (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  -----    -----
+  +--> ?PR?SANGDAN?MAIN
+  +--> ?PR?XENKE?MAIN
+
+?PR?SANGDAN?MAIN               0008H    0001H
+  +--> ?PR?_DELAY_MS?DELAY
+
+?PR?XENKE?MAIN                 0008H    0001H
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  SangDan8LED (MAIN)
+
+  VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/20/2023  01:00:10  PAGE 2
+
+
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0003H         PUBLIC        SangDan
+  C:0087H         PUBLIC        main
+  C:003AH         PUBLIC        XenKe
+  -------         PROC          SANGDAN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         4
+  C:0003H         LINE#         7
+  C:0006H         LINE#         8
+  C:0008H         LINE#         9
+  C:0010H         LINE#         10
+  C:0017H         LINE#         11
+  C:0020H         LINE#         13
+  C:0023H         LINE#         14
+  C:0029H         LINE#         15
+  C:0030H         LINE#         16
+  C:0039H         LINE#         17
+  -------         ENDPROC       SANGDAN
+  -------         PROC          XENKE
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:003AH         LINE#         19
+  C:003AH         LINE#         22
+  C:003DH         LINE#         23
+  C:0040H         LINE#         24
+  C:0047H         LINE#         25
+  C:004AH         LINE#         26
+  C:0051H         LINE#         27
+  C:005AH         LINE#         28
+  -------         ENDPROC       XENKE
+  -------         PROC          MAIN
+  C:0087H         LINE#         32
+  C:0087H         LINE#         34
+  C:0087H         LINE#         35
+  C:008AH         LINE#         36
+  C:008DH         LINE#         37
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:005BH         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:005BH         LINE#         5
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/20/2023  01:00:10  PAGE 3
+
+
+  C:005BH         LINE#         7
+  C:0065H         LINE#         8
+  C:0073H         LINE#         9
+  C:007AH         LINE#         10
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+Program Size: data=10.0 xdata=0 code=143
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

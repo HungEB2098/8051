@@ -1,0 +1,97 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        06/18/2023  00:43:36  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj TO DaoBit RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  DaoBit (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            IDATA   0008H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0029H     UNIT         ?PR?MAIN?MAIN
+            CODE    002CH     0024H     UNIT         ?PR?_DELAY_MS?MAIN
+            CODE    0050H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   DaoBit (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN
+  +--> ?PR?_DELAY_MS?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  DaoBit (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  C:0003H         PUBLIC        main
+  C:0030H         PUBLIC        _Delay_ms
+  C:002CH         SYMBOL        L?0019
+  -------         PROC          L?0018
+  -------         ENDPROC       L?0018
+BL51 BANKED LINKER/LOCATER V6.22                                                      06/18/2023  00:43:36  PAGE 2
+
+
+  C:002CH         SYMBOL        L?0019
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:0030H         LINE#         3
+  C:0030H         LINE#         5
+  C:003AH         LINE#         6
+  C:0048H         LINE#         7
+  C:004FH         LINE#         8
+  -------         ENDPROC       _DELAY_MS
+  -------         PROC          MAIN
+  C:0003H         LINE#         9
+  C:0003H         LINE#         10
+  C:0003H         LINE#         11
+  C:0006H         LINE#         12
+  C:0008H         LINE#         13
+  C:000CH         LINE#         15
+  C:0012H         LINE#         16
+  C:0015H         LINE#         17
+  C:0017H         LINE#         19
+  C:001AH         LINE#         20
+  C:001DH         LINE#         21
+  C:0021H         LINE#         23
+  C:0027H         LINE#         24
+  C:002AH         LINE#         25
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=9.0 xdata=0 code=92
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

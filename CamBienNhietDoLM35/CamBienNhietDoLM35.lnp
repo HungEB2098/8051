@@ -1,0 +1,6 @@
+"main.obj",
+".\ADC0804.obj",
+".\Delay.obj",
+".\LCD4.obj" 
+TO "CamBienNhietDoLM35" 
+RAMSIZE(256) 

@@ -1,0 +1,28 @@
+C51 COMPILER V9.52.0.0   MAIN                                                              06/26/2023 08:58:11 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          #include"main.h"
+*** ERROR C301 IN LINE 4 OF main.h: identifier expected
+   2          #include"..\Lib\Delay.h"
+   3          #include"..\Lib\IE74595.h"
+   4          unsigned char code Code7Seg[] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x82, 0xF8, 0x80, 0x90};
+   5          
+   6          void main() {
+   7   1        unsigned char i;
+   8   1        while(1) {
+   9   2          for(i=0;i<9;i++)
+  10   2       {
+  11   3      Out(&Code7Seg[i],1);
+  12   3         Delay_ms(1000);
+  13   3       }
+  14   2        }
+  15   1        
+  16   1      }
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  1 ERROR(S)

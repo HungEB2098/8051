@@ -1,0 +1,4 @@
+"main.obj",
+".\Delay.obj" 
+TO "Count0_DemXungNgoai" 
+RAMSIZE(256) 

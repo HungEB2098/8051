@@ -1,0 +1,215 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/25/2023  00:00:12  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj, .\Delay.obj TO TaoXungPWM RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  .\Delay.obj (DELAY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULDIV)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?SLSHR)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?LIMUL)
+
+
+LINK MAP OF MODULE:  TaoXungPWM (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?MAIN
+            DATA    0012H     0004H     UNIT         _DATA_GROUP_
+            IDATA   0016H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     010FH     UNIT         ?C?LIB_CODE
+            CODE    0112H     007CH     UNIT         ?PR?_PWM_SET_DUTY?MAIN
+            CODE    018EH     0079H     UNIT         ?PR?_PWM_INIT?MAIN
+            CODE    0207H     0060H     UNIT         ?PR?MAIN?MAIN
+            CODE    0267H     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    0287H     000CH     UNIT         ?C_C51STARTUP
+            CODE    0293H     0003H     UNIT         ?PR?PWM_START?MAIN
+            CODE    0296H     0003H     UNIT         ?PR?PWM_STOP?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   TaoXungPWM (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0012H    0004H
+  +--> ?PR?_PWM_INIT?MAIN
+  +--> ?PR?_PWM_SET_DUTY?MAIN
+  +--> ?PR?PWM_START?MAIN
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/25/2023  00:00:12  PAGE 2
+
+
+SYMBOL TABLE OF MODULE:  TaoXungPWM (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:00A0H         PUBLIC        P2
+  B:00A8H.7       PUBLIC        EA
+  C:0112H         PUBLIC        _PWM_Set_Duty
+  D:0008H         PUBLIC        Toff
+  C:0207H         PUBLIC        main
+  D:000AH         PUBLIC        Ton
+  D:000CH         PUBLIC        Toff_h_reload
+  D:0089H         PUBLIC        TMOD
+  D:000DH         PUBLIC        Toff_l_reload
+  B:00A0H.0       PUBLIC        PWM_PIN
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  D:000EH         PUBLIC        T
+  D:0010H         PUBLIC        Ton_h_reload
+  B:0088H.4       PUBLIC        TR0
+  D:0011H         PUBLIC        Ton_l_reload
+  C:0293H         PUBLIC        PWM_Start
+  C:018EH         PUBLIC        _PWM_Init
+  C:0296H         PUBLIC        PWM_Stop
+  -------         PROC          _PWM_INIT
+  D:0006H         SYMBOL        ck
+  C:018EH         LINE#         8
+  C:018EH         LINE#         9
+  C:018EH         LINE#         10
+  C:0190H         LINE#         12
+  C:0193H         LINE#         13
+  C:0196H         LINE#         15
+  C:0198H         LINE#         16
+  C:019AH         LINE#         18
+  C:019EH         LINE#         19
+  C:01A9H         LINE#         20
+  C:01B6H         LINE#         22
+  C:01D5H         LINE#         23
+  C:01DCH         LINE#         25
+  C:01FAH         LINE#         26
+  C:0200H         LINE#         27
+  C:0203H         LINE#         28
+  C:0206H         LINE#         29
+  -------         ENDPROC       _PWM_INIT
+  -------         PROC          PWM_START
+  C:0293H         LINE#         31
+  C:0293H         LINE#         32
+  C:0293H         LINE#         33
+  C:0295H         LINE#         34
+  -------         ENDPROC       PWM_START
+  -------         PROC          PWM_STOP
+  C:0296H         LINE#         36
+  C:0296H         LINE#         37
+  C:0296H         LINE#         38
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/25/2023  00:00:12  PAGE 3
+
+
+  C:0298H         LINE#         39
+  -------         ENDPROC       PWM_STOP
+  -------         PROC          _PWM_SET_DUTY
+  D:0007H         SYMBOL        duty
+  C:0112H         LINE#         41
+  C:0112H         LINE#         42
+  C:0112H         LINE#         43
+  C:0115H         LINE#         44
+  C:0115H         LINE#         45
+  C:0117H         LINE#         46
+  C:0119H         LINE#         47
+  C:011AH         LINE#         48
+  C:011DH         LINE#         49
+  C:011DH         LINE#         50
+  C:011FH         LINE#         51
+  C:0121H         LINE#         52
+  C:0122H         LINE#         54
+  C:0122H         LINE#         55
+  C:0138H         LINE#         56
+  C:0145H         LINE#         57
+  C:0160H         LINE#         58
+  C:0167H         LINE#         60
+  C:0185H         LINE#         61
+  C:018BH         LINE#         63
+  C:018DH         LINE#         64
+  C:018DH         LINE#         65
+  -------         ENDPROC       _PWM_SET_DUTY
+  -------         PROC          MAIN
+  -------         DO            
+  D:0012H         SYMBOL        n
+  D:0014H         SYMBOL        duty
+  -------         ENDDO         
+  C:0207H         LINE#         66
+  C:0207H         LINE#         67
+  C:0207H         LINE#         68
+  C:0210H         LINE#         70
+  C:0217H         LINE#         72
+  C:021CH         LINE#         73
+  C:021FH         LINE#         74
+  C:021FH         LINE#         75
+  C:021FH         LINE#         76
+  C:0226H         LINE#         77
+  C:022CH         LINE#         78
+  C:0237H         LINE#         79
+  C:0243H         LINE#         80
+  C:0243H         LINE#         81
+  C:024BH         LINE#         82
+  C:0257H         LINE#         83
+  C:0260H         LINE#         84
+  C:0260H         LINE#         85
+  C:0265H         LINE#         86
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0267H         PUBLIC        _Delay_ms
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/25/2023  00:00:12  PAGE 4
+
+
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:0267H         LINE#         5
+  C:0267H         LINE#         7
+  C:0271H         LINE#         8
+  C:027FH         LINE#         9
+  C:0286H         LINE#         10
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+  -------         MODULE        ?C?ULDIV
+  C:003FH         PUBLIC        ?C?ULDIV
+  -------         ENDMOD        ?C?ULDIV
+
+  -------         MODULE        ?C?SLSHR
+  C:00D1H         PUBLIC        ?C?SLSHR
+  -------         ENDMOD        ?C?SLSHR
+
+  -------         MODULE        ?C?LIMUL
+  C:00E5H         PUBLIC        ?C?LIMUL
+  -------         ENDMOD        ?C?LIMUL
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?PWM_STOP?MAIN
+
+Program Size: data=23.0 xdata=0 code=665
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

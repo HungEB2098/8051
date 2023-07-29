@@ -1,0 +1,4 @@
+"main.obj",
+".\Delay.obj" 
+TO "SangDan8LED" 
+RAMSIZE(256) 

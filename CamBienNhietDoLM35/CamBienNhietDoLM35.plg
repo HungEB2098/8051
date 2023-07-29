@@ -1,0 +1,25 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\KeilC_8051\CamBienNhietDoLM35\CamBienNhietDoLM35.uvproj
+Project File Date:  07/25/2023
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=20.0 xdata=0 code=1260
+creating hex file from "CamBienNhietDoLM35"...
+"CamBienNhietDoLM35" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LCD_CUSTOM_CHR?LCD4
+Program Size: data=20.0 xdata=0 code=1260
+creating hex file from "CamBienNhietDoLM35"...
+"CamBienNhietDoLM35" - 0 Error(s), 1 Warning(s).

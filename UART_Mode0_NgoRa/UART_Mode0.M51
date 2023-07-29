@@ -1,0 +1,115 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        07/04/2023  20:46:38  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj, .\Delay.obj TO UART_Mode0 RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  .\Delay.obj (DELAY)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  UART_Mode0 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         _DATA_GROUP_
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     002CH     UNIT         ?PR?MAIN?MAIN
+            CODE    002FH     0020H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    004FH     000CH     UNIT         ?PR?_MODE?MAIN
+            CODE    005BH     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   UART_Mode0 (MAIN)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  0008H    0004H
+  +--> ?PR?_MODE?MAIN
+  +--> ?PR?_DELAY_MS?DELAY
+
+
+
+SYMBOL TABLE OF MODULE:  UART_Mode0 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:004FH         PUBLIC        _Mode
+  B:00B0H.2       PUBLIC        P3_2
+  B:0098H.1       PUBLIC        TI
+BL51 BANKED LINKER/LOCATER V6.22                                                      07/04/2023  20:46:38  PAGE 2
+
+
+  C:0003H         PUBLIC        main
+  D:0099H         PUBLIC        SBUF
+  B:0098H.7       PUBLIC        SM0
+  B:0098H.6       PUBLIC        SM1
+  -------         PROC          _MODE
+  D:0007H         SYMBOL        b
+  C:004FH         LINE#         3
+  C:004FH         LINE#         4
+  C:0051H         LINE#         5
+  C:0054H         LINE#         6
+  C:0056H         LINE#         8
+  C:0058H         LINE#         9
+  C:005AH         LINE#         10
+  -------         ENDPROC       _MODE
+  -------         PROC          MAIN
+  -------         DO            
+  D:0008H         SYMBOL        i
+  D:000AH         SYMBOL        a
+  -------         ENDDO         
+  C:0003H         LINE#         11
+  C:0003H         LINE#         13
+  C:0008H         LINE#         14
+  C:000CH         LINE#         15
+  C:0010H         LINE#         16
+  C:0015H         LINE#         17
+  C:001CH         LINE#         18
+  C:001CH         LINE#         21
+  C:002DH         LINE#         23
+  C:002DH         LINE#         25
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        DELAY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:002FH         PUBLIC        _Delay_ms
+  -------         PROC          _DELAY_MS
+  D:0006H         SYMBOL        t
+  -------         DO            
+  D:0004H         SYMBOL        x
+  D:0002H         SYMBOL        y
+  -------         ENDDO         
+  C:002FH         LINE#         5
+  C:002FH         LINE#         7
+  C:0039H         LINE#         8
+  C:0047H         LINE#         9
+  C:004EH         LINE#         10
+  -------         ENDPROC       _DELAY_MS
+  -------         ENDMOD        DELAY
+
+Program Size: data=13.0 xdata=0 code=103
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
